@@ -24,17 +24,18 @@
             }
             return this;
         },
-        addOnce:function(type, fn){
-            if(type in this._listener) {
+        addOnce:function(exam, fn){
+            if(exam in this._listener) {
                 return;
             }
-            var tem = function(){
-                fn.call(this)
-                this.removeEvent(type)
+            var tem = function(events, obj){
+                fn.call(this, events, obj)
+                this.removeEvent(exam)
             }.bind(this);
-            this.addEvent(type, tem)
+            this.addEvent(exam, tem)
+            return this;
         },
-        fireEvent: function(type) {
+        fireEvent: function(type, obj) {
             if (type && this._listener[type]) {
                 var events = {
                     type: type,
@@ -42,7 +43,7 @@
                 };
                 
                 for (var length = this._listener[type].length, start=0; start<length; start+=1) {
-                    this._listener[type][start].call(this, events);
+                    this._listener[type][start].call(this, events, obj);
                 }
             }
             return this;
