@@ -1,9 +1,7 @@
-'use strict';
-
 module.exports = function (element, cls) {
-    if (element.classList) {
+    if(element.classList){
         return element.classList.contains(cls);
-    } else {
+    }else{
         return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
     }
-};
+}

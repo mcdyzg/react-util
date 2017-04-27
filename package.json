@@ -1,0 +1,22 @@
+{
+  "name": "domtoolkit",
+  "version": "1.0.0",
+  "description": "Toolkit for dom based on domkit(thx)",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcdyzg/react-util.git"
+  },
+  "keywords": [
+    "domkit",
+    "toolkit"
+  ],
+  "author": "mcdyzg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mcdyzg/react-util/issues"
+  },
+  "homepage": "https://github.com/mcdyzg/react-util#readme"
+}

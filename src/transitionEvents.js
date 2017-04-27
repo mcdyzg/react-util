@@ -5,7 +5,6 @@
  * transition/animation ends, based on the style property used to
  * define that event.
  */
-
 var EVENT_NAME_MAP = {
   transitionend: {
     'transition': 'transitionend',
@@ -58,6 +57,7 @@ if (typeof window !== 'undefined') {
   detectEvents();
 }
 
+
 // We use the raw {add|remove}EventListener() call because EventListener
 // does not know how to remove event listeners and we really should
 // clean up. Also, these events are not triggered in older browsers
@@ -72,23 +72,23 @@ function removeEventListener(node, eventName, eventListener) {
 }
 
 module.exports = {
-  addEndEventListener: function addEndEventListener(node, eventListener) {
+  addEndEventListener: function(node, eventListener) {
     if (endEvents.length === 0) {
       // If CSS transitions are not supported, trigger an "end animation"
       // event immediately.
       window.setTimeout(eventListener, 0);
       return;
     }
-    endEvents.forEach(function (endEvent) {
+    endEvents.forEach(function(endEvent) {
       addEventListener(node, endEvent, eventListener);
     });
   },
 
-  removeEndEventListener: function removeEndEventListener(node, eventListener) {
+  removeEndEventListener: function(node, eventListener) {
     if (endEvents.length === 0) {
       return;
     }
-    endEvents.forEach(function (endEvent) {
+    endEvents.forEach(function(endEvent) {
       removeEventListener(node, endEvent, eventListener);
     });
   }
