@@ -2,6 +2,7 @@
   "name": "domtoolkit",
   "version": "1.0.0",
   "description": "Toolkit for dom based on domkit(thx)",
+  "main":"index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
