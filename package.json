@@ -1,6 +1,6 @@
 {
   "name": "domtoolkit",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Toolkit for dom based on domkit(thx)",
   "main": "index.js",
   "scripts": {
@@ -19,5 +19,6 @@
   "bugs": {
     "url": "https://github.com/mcdyzg/react-util/issues"
   },
-  "homepage": "https://github.com/mcdyzg/react-util#readme"
+  "homepage": "https://github.com/mcdyzg/react-util#readme",
+  "dependencies": {}
 }
